@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif, system-ui;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: none;
+    
+}
+
+.topBar .container span{
+    display: flex;
+    margin-left: 0;
+}
+
+#b1{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: #fff solid 1px;
+    background: #03436e;
+    display: inline-block;
+    margin: 0;
+}
+#b2{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: #fff solid 1px;
+    background: #8f2094;
+    display: inline-block;
+    margin: 0;
+
+}
+#b3{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: #fff solid 1px;
+    background: #1b1b1b;
+    display: inline-block;
+    margin: 0;
+
+}
+#b4{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: #fff solid 1px;
+    background: #cabe11;
+    display: inline-block;
+    margin: 0;
+
+}
+
+body{
+    background: #fff;
+    background: url(images/bg.png) ;
+}
+
+.topBar{
+    padding: 1rem;
+    background: #03436e;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+
+}
+
+.topUI{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#logo{
+    height: 6rem;
+    margin: 0;
+}
+
+h1{
+    color: #03436e;
+    display: inline;
+    font-size: 3rem;
+    margin: 0;
+}
+
+h2{
+    color: #03436e;
+    text-align: center;
+    padding: 2rem 0 1.5rem;
+}
+
+.container p{
+    text-align: center;
+}
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 1200px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imageContainer{
+    background: rgb(203, 203, 203, .7);
+
+    
+}
+
+#image{
+    max-width: 1200px;
+    background: url(images/bg.png) center / cover no-repeat;
+}
+
+h2 span{
+    background: #03436e;
+    color: #fff;
+    padding: .5rem;
+    border-radius: .8rem;
+}
+
+p{
+    padding-bottom: 1rem;
+}
+
+.boxContainer{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 auto;
+}
+
+
+
+.box{
+    background: rgb(243, 243, 243, .7);
+    border-radius: 0.3rem;
+    width: 47%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #03436e;
+    margin: 1rem;
+
+}
+
+.idk{
+    display: flex;
+}

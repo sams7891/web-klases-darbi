@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8"> <!-- šis paradzēts lai lv garumzīmes attēlotas pareizi-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML formas</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"> <!-- Ikona pārlūka cilnē-->
+</head>
+<body style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <div style="text-align: center;">
+        <a href="index.html"> HTML ievads</a> |
+        <a href="saites.html"> HTML saites</a> |
+        <a href="atteli.html"> HTML attēli</a> |
+        <a href="tabulas.html"> HTML tabulas</a> |
+        <a href="formas.html"> HTML formas</a> |
+        <a href="atlase.html"> HTML atlase</a> |
+        <a href="pd-1.html"> PD-1</a> |
+        <a href="pd-2.html"> PD-2</a> |
+    </div>
+
+    <hr>
+
+    <h1>HTML formas</h1>
+
+    <hr>
+    <!-- Tēmas saturs -->
+
+    <form action="sned-message.php" method="post">
+        <fieldset style="width: 50%; margin:  0 auto;">
+            <legend style="text-align: center; font-size: 16pt;">Pieteikums</legend>
+            <p>
+                Lietotājvārds:
+                <input type="text" name="lietotajvards" maxlength="10" placeholder="Ievadi lietotājvārdu" autofocus required> <!-- alternatīva priekš name ir id atribūts atkarība no back-end valodas -->
+                <input type="text" name="domens" value="@manalapa.lv" size="12" readonly> <!-- priekš readonly līdzīgs atribūts ir disabled-->
+            </p>
+            <p>
+                Parole:
+                <input type="password" name="parole" minlength="8" required autocomplete="off">
+            </p>
+            <p>
+                E-pasts:
+                <input type="email" name="e-pasts" autocomplete="email" required>
+            </p>
+            <p>
+                Dzimums:
+                <input type="radio" name="dzimums" id="v" value="v">
+                <label for="v">Vīrietis</label>
+                <input type="radio" name="dzimums" id="s" value="s">
+                <label for="s">Sieviete</label>
+            </p>
+            <p>
+                Dzimšanas datums:
+                <input type="date" name="datums" >
+            </p>
+            <p>
+                Mīļākā krāsa:
+                <input type="color" name="krasa" value="#9534eb">
+            </p>
+            <p>
+                Svars:
+                <input type="number" name="svars" value="67" max="911" step="10">
+            </p>
+            <p>
+                LVT grupa:
+                <select name="grupa" required>
+                    <option value="" hidden>Izvēlies</option>
+                    <option value="1">1PT</option>
+                    <option value="2">2PT</option>
+                    <option value="3">3PT</option>
+                    <option value="4">4PT</option>
+                    <option value="5">5PT</option>
+                </select>
+            </p>
+            <p>
+                Labākā Operētājsistēma:
+                <input list="os">
+                <datalist id="os">
+                    <option value="ROS 1">
+                    <option value="ROS 1.2">
+                    <option value="ROS 2">
+                    <option value="ROS 3">
+                    <option value="ROS 3.1">
+                </datalist>
+            </p>
+            <p>
+                Tavs attēls:
+                <input type="file" name="attels">
+            </p>
+            <p>
+                Protu valodas:
+                <input type="checkbox" name="valodas" value="html"> HTML
+                <input type="checkbox" name="valodas" value="css"> CSS
+                <input type="checkbox" name="valodas" value="js"> JavaScript
+                <input type="checkbox" name="valodas" value="php"> PHP
+                <input type="checkbox" name="valodas" value="java"> Java
+                <input type="checkbox" name="valodas" value="c++"> C++
+                <input type="checkbox" name="valodas" value="c#"> C#
+            </p>
+            <p>
+                Komentāri: <br>
+                <textarea name="komentars" rows="8" cols="70" placeholder="Ievadi savu komentārus..."></textarea>
+            </p>
+            
+            <button type="submit" name="saglabat">Saglabāt</button>
+            <button type="reset" name="notirit">Notīrīt</button>
+        </fieldset>
+    </form>
+    
+    <hr>
+
+    <p style="text-align: center;">Mājaslapu izstrādāja <b>RS Industrijas</b> &copy; 2026</p>
+</body>
+</html>

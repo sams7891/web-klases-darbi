@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif, system-ui;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+:root{
+    --maincolor: #f57266;
+}
+
+*::selection{ /* Atlasīšanas (SELECT) krāsa */
+    background: var(--maincolor);
+    color: #fff;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #555;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--maincolor);
+    border-radius: 1rem;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+header{
+    width: 100%;
+    background: #ffffffcc;
+    backdrop-filter: blur(1rem);
+    padding: 2.5rem 7%;
+    border-bottom: .1rem solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 2rem;
+    margin-right: .5rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav li a{
+    color: #333;
+    font-size: 1.3rem;
+}
+
+nav li a:hover{
+    color: var(--maincolor);
+    border-bottom: .2rem solid var(--maincolor);
+    padding: 1rem 0;
+}
+
+section{
+    padding: 3rem 7%;
+    min-height: 50vh;
+}
+
+#sakums, #izstrade, #ieguvumi, #prasmes, .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.image, .content{
+    flex: 1 1 25rem;
+}
+
+.image img{
+    width: 100%;
+}
+
+#sakums span{
+    color: var(--maincolor);
+    font-size: 2rem;
+}
+
+h1{
+    color: #444;
+    font-size: 2.5rem;
+}
+
+h2{
+    color: #666;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+span{
+    color: var(--maincolor);
+}
+
+p{
+    color: #888;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: var(--maincolor);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.btn:hover{
+    background: #333;
+}
+
+#pakalpojumi h2{
+    text-align: center;
+}
+
+#pakalpojumi .box{
+    background: #fff;
+    border: .1rem solid #eee;
+    padding: 2rem;
+    width: 25rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem #ddd;
+    text-align: center;
+}
+
+#pakalpojumi .box:hover{
+    transform: scale(105%);
+}
+
+#pakalpojumi .box img{
+    width: 7rem;
+    height: 7rem;
+}
+
+#pakalpojumi .box h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #666;
+    padding: 1rem 0;
+}
+
+#izstrade, #ieguvumi{
+    background: #222;
+}
+
+/* #izstrade h2, #ieguvumi h2{ */
+:is(#izstrade, #ieguvumi) h2{
+    color: #fff;
+}
+
+#izstrade li, #ieguvumi li{
+    color: #eee;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    padding: .5rem 0;
+}
+
+#prasmes ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    gap: 3rem;
+}
+
+#prasmes ul li{
+    margin-left: 3rem;
+    font-size: 1.3rem;
+    color: #444;
+    padding: .5rem 0;
+}
+
+#menu{
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*
+Klases darbs
+*/
+
+footer{
+    background: #333;
+    padding: 3rem 7%;
+}
+
+footer hr{
+    border: 2px solid #474343;
+    margin: 2rem 0;
+}
+
+footer p, footer li{
+    color: #888;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+footer p, footer ul{
+    padding-top: 2rem;
+}
+
+footer li i{
+    color: var(--maincolor);
+}
+
+footer h3{
+    color: #eee;
+    display: inline;
+    font-size: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+footer h3 span{
+    color: #eee;
+    padding-bottom: .5rem;
+    border-bottom: #eee solid 1px;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+.footerItem{
+    width: 40%;
+}
+
+footer .btn{
+    width: 100%;
+    font-size: 1rem;
+    color: #ddd;
+    border-width: 0;
+
+}
+
+footer .btn:hover{
+    background: #cacaca;
+    color: var(--maincolor);
+}
+
+#footerParagraphOverwrite{
+    padding-top: 0;
+}
+
+#email{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-width: 0;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer li{
+    padding: .5rem 0;
+}
+
+footer li a{
+    text-decoration: none;
+    color: #888;
+}
+
+footer li a:hover{
+    color: #eee;
+}
+
+footer li i{
+    padding-right: 2rem;
+}
+
+.underFooter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLvt{
+    padding-top: 1rem;
+    color: #ddd;
+}
+
+.icons{
+    display: inline;
+    color: #eee;
+    
+}
+
+.icons i{
+    border:1px solid #474343;
+    border-radius: 40%;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    width: 5rem;
+}
+
+.icons i:hover{
+    scale: 1.5;
+    margin: 0 2rem;
+}
+
+@media (max-width: 1600px){
+    .footerContainer{
+        flex-wrap: wrap;
+    }
+
+    html{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 900px){
+    .footerContainer{
+        flex-wrap: wrap;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    nav{
+        position: fixed;
+        top: 7.5rem;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        border-top: .2rem solid rgba(0,0,0,10%);
+        background: #eee;
+    }
+
+    .nav-toggle{
+        left: 0;
+    }
+
+    nav ul{
+        flex-flow: column;
+        padding: 2rem;
+    }
+
+    nav li{
+        text-align: center;
+        width: 100%;
+    }
+
+    nav li a{
+        display: block;
+        padding: 1rem;
+        background: #ddd;
+        color: #333;
+        border-radius: 1rem;
+    }
+
+    nav li a:hover{
+        background: var(--maincolor);
+        color: #fff;
+        border-bottom: none;
+    }
+
+    #sakums, #izstrade, #prasmes{
+        flex-flow: column;
+    }
+
+    #ieguvumi{
+        flex-flow: column-reverse;
+    }
+
+    :is(#izstrade, #prasmes, #ieguvumi) :is(.image, .content){
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 550px){
+    .btn{
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .footerContainer{
+        flex-wrap: wrap;
+    }
+}

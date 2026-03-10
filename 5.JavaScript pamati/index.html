@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="shortcut icon" href="images/javascript-logo.png" type="image/x-icon">
+    <title>JavaScript pamati</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="images/javascript-logo.png" alt="JS logo">JavaScript pamati
+        </h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. Mainīgie</h2>
+            <p>Izmanto <code>let</code> vai <code>const</code> mainīgo definēšanai</p>
+            <button id="btn-variables">Izpildīt</button>
+            <div id="variables-output" class="output"></div>
+        </section>
+        <section>
+            <h2>2. Nosacījumi</h2>
+            <p>Ievadi savuvecumu un noskaidro, vai vari vadīt auto</p>
+            <input type="number" id="age-input" min="1" max="150" placeholder="Tavs vecums">
+            <button id="btn-age">Pārbaudīt</button>
+
+            <br>
+
+            <select id="gender-select">
+                <option value="" hidden>Norādat dzimumu</option>
+                <option value="m">Vīrietis</option>
+                <option value="f">Sieviete</option>
+            </select>
+
+            <div id="age-output" class="output"></div>
+        </section>
+        <section>
+            <h2>3. Cikli</h2>
+            <p>Nospied pogu, lai redzētu skaitļus no 1 līdz 20</p>
+            <button id="btn-loop">Nospied mani</button>
+            <div id="loop-output"></div>
+
+            <hr>
+
+            <p>Ievadi vārdu un programma noteiks vārda garumu</p>
+            <input type="text" id="text-lenght">
+            <button id="btn-loop2">Nospied mani</button>
+            <div id="loop-output2"></div>
+        </section>
+        <section>
+            <h2>4, Masīvi, to metodes</h2>
+            <p>Masīvi glabā vairākas vērtības vienā mainīgajā.</p>
+            <button id="btn-array">Izpildīt</button>
+            <div id="array-output" class="output"></div>
+            <!-- <hr>
+            <input type="text" id="array-input">
+            <button id="btn-array2" class="button">Noespied mani</button>
+            <div id="array-output2" class="output"></div> -->
+        </section>
+        <section>
+            <h2>5. Objekti</h2>
+            <p>Objekti ļauj saglabāt vairākas īpašības un metodes par vienu vienību.</p>
+            <button id="btn-objects">Izpildīt</button>
+            <div id="objects-output" class="output"></div>
+        </section>
+        <section>
+            <h2>6. Funkcijas</h2>
+            <p>Aprēķini laukumu, ievadot platumu un augstumu</p>
+            <input type="number" id="width" placeholder="Platums">
+            <input type="number" id="height" placeholder="Augstums">
+            <button id="btn-function">Aprēķināt</button>
+            <div id="function-output" class="output"></div>
+        </section>
+        <section>
+            <h2>7. DOM manipulācijas</h2>
+            <p>Ar JavaScript var mainīt lapas izskatu un saturu.</p>
+            <div class="box" id="box"></div>
+            <button id="btn-color">Mainīt krāsu</button>
+        </section>
+        <section>
+            <h2>8. Atskaites taimeris</h2>
+            <p>Ievadi nākotnes datumu un noskaidro, cik dienas līdz tam ir atlikušas</p>
+            <input type="date" id="date-input">
+            <button id="btn-countdown">Rādīt dienas</button>
+            <div id="countdown-output" class="output"></div>
+        </section>
+        <section>
+            <h2>9. Notikumi</h2>
+            <p>Noevieto kursoru uz kādu no kastēm vai noklikšķini uz tām!</p>
+            <div class="event-container">
+                <div class="box" id="box1">Kaste 1</div>
+                <div class="box" id="box2">Kaste 2</div>
+            </div>
+            <div class="output" id="event-output"></div>
+        </section>
+        <section>
+            <h2>10. Uzdevumu saraksts</h2>
+            <p>Ieraksti uzdevumu un pievieno to sarakstam.</p>
+
+            <input type="text" id="todo-input" placeholder="Jauns uzdevums...">
+            <button id="btn-add-todo">Pievienot</button>
+
+            <ul id="todo-list" class="todo-list">
+
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

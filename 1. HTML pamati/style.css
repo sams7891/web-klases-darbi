@@ -1,0 +1,33 @@
+#kruts-body{
+    background-color: crimson;
+}
+
+.nepara-rindkopa{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: purple;
+    color: greenyellow;
+}
+
+.para-rindkopa{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: greenyellow;
+    color: purple;
+}
+
+#kruts-virsraksts{
+    font-size: xx-large;
+    font-family: Comic Sans MS;
+    color: teal;
+    text-align: center;
+}
+
+.lieli-burti{
+    text-decoration: dotted;
+    font-size: 20pt;
+}
+
+.izmers{
+    display: inline-block;
+    height: 100px;
+    padding: 100px;
+}
