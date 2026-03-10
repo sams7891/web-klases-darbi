@@ -188,7 +188,24 @@ const renderTodos = () => {
         li.textContent = todo.text
 
         if(todo.done) li.classList.add("done")
+        
+        li.addEventListener("click", () => {
+            todos[index].done = !todos[index].done
+            saveTodos()
+            renderTodos()
+        })
 
+        const delBtn = document.createElement("button")
+        delBtn.textContent = "Dzēst"
+        delBtn.addEventListener("click", (e) => {
+            e.stopPropagation()
+            todos.splice(index, 1)
+            saveTodos()
+            renderTodos()
+        })
+
+
+        li.appendChild(delBtn)
         todoList.appendChild(li)
     })
 }

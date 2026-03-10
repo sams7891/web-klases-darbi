@@ -155,3 +155,7 @@ input, select{
     text-decoration: line-through;
     
 }
+
+todo-list li.done:hover{
+    filter: brightness(60%);
+}
