@@ -186,6 +186,9 @@ const renderTodos = () => {
     todos.forEach((todo, index) =>{
         const li = document.createElement("li")
         li.textContent = todo.text
+
+        if(todo.done) li.classList.add("done")
+
         todoList.appendChild(li)
     })
 }
@@ -199,6 +202,10 @@ btnAddTodo.addEventListener("click", () => {
     renderTodos()
     saveTodos()
     todoInput.value = ""
+})
+
+todoInput.addEventListener("keypress", (e) =>{
+    if(e.key === "Enter") btnAddTodo.click()
 })
 
 renderTodos()
