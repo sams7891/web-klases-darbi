@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif, system-ui;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .3s;
+}
+
+:root{
+    --mainColor: #03436e;
+    --footerColor: #054c7c;
+}
+
+header{
+    background: var(--mainColor);
+}
+
+.topHeaderInside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topbtm{
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 1rem;
+    border-bottom-width:2px;
+    border-right-width: 2px;
+    cursor: pointer;
+}
+
+#btm1{
+    background: #03436e;
+}
+#btm2{
+    background: #8f2094;
+}
+#btm3{
+    background: #1b1b1b;
+}
+#btm4{
+    background: #cabe11;
+}
+
+.topHeaderInside span{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+main{
+    background: url(images/bg.png);
+    height: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 40vh;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1.5s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--mainColor);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+.container img{
+    width: 17rem;
+}
+
+#bottomHeader{
+    padding: 1.3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: var(--mainColor);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h2{
+    color: var(--mainColor);
+    text-align: center;
+    padding: 3rem 0 1.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+h2 span{
+    color: #fff;
+    background: var(--mainColor);
+    border-radius: .8rem;
+    padding: .2rem .7rem;
+}
+
+p{
+    text-align: center;
+    line-height: 2rem;
+}
+
+#imageBackdrop{
+    background: rgba(206, 207, 207, 0.6);
+}
+
+#slideShow1{
+    background: url(images/slideshow1.jpg) center / cover no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+#slideShow2{
+    background: url(images/slideshow2.png) center / cover no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+#slideShow3{
+    background: url(images/slideshow3.png) center / cover no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+#articleContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 2.5rem;
+}
+
+.articleItem{
+    width: 580px;
+    background: rgba(214, 214, 226, 0.4);
+    border-radius: 1rem;
+    display: flex;
+    padding: 1.5rem;    
+}
+
+.articleItem img{
+    width: 6rem;
+    align-self: center;
+    padding-right: .9rem;
+}
+
+h3{
+    color: var(--mainColor);
+    padding-bottom: 1rem;
+}
+
+.articleItem p{
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+#reviewArticleContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.reviewArticle{
+    display: flex;
+    flex-direction: column;
+    background: rgba(219, 219, 228, 0.4);
+    border-radius: 1rem;
+    width: 390px;
+    padding: 1rem 1rem 0;
+}
+
+.reviewArticle h3{
+    text-align: center;
+    padding: 0 0 1rem;
+}
+.reviewArticle img{
+    width: 10rem;
+    align-self: center;
+    flex-shrink: 0;
+    position: relative;
+    top: -4rem;
+}
+
+.btn{
+    display: inline-block;
+    align-self: center;
+    background: #999;
+    padding: 1rem 6rem;
+    border-radius: .5rem;
+    margin: .8rem 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.reviewInside{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -3rem;
+}
+
+.btn:hover{
+    background: var(--mainColor);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background: var(--footerColor);
+}
+
+#footerTop{
+    background: url(images/bg2.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+#footerTop h2{
+    color: #fff;
+    font-weight: 300;
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+#footerTop h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+footer form{
+    display: flex;
+    margin: 0 2rem;
+    padding-top: 1rem;
+}
+
+#text, #email{
+    border-width: 0;
+    border-radius: .5rem;
+    padding: .7rem  2rem .7rem .7rem;
+    margin: 0 .2rem;
+}
+
+footer button{
+    border-width: 0;
+    border-radius: .5rem;
+    padding: .8rem;
+    color: var(--mainColor);
+    font-weight: 700;
+    font-size: .9rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+footer button:hover{
+    background: #03436e;
+    color: #fff;
+}
+
+#footerBottom{
+    text-align: center;
+    color: #fff;
+    background: var(--mainColor);
+    padding: 3rem 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+
+@media (max-width: 1600px){
+    html{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 1200px){
+    .container{
+        width: auto;
+        margin: 0 2rem;
+    }
+    #articleContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem 2.5rem;
+    
+    }
+
+    .articleItem{
+        width: 100%;
+        background: rgba(214, 214, 226, 0.4);
+        border-radius: 1rem;
+        display: flex;
+        padding: 1.5rem;    
+    }
+}
+
+@media (max-width: 900px){
+    #reviewArticleContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+
+    .reviewArticle{
+    margin-top: 2rem;
+}
+    
+
+}
+
+@media (max-width:800px){
+    h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #bottomHeader{
+    padding: 1.3rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    }
+}
+
+@media (max-width:550px){
+    .inputFields{
+        display: flex;
+        flex-direction: column;
+
+    }
+    #text, #email, button{
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width:480px){
+    .container img{
+        width: 20rem;
+        margin: 0 auto;
+    }
+}
