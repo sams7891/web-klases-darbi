@@ -6,12 +6,16 @@
     font-family: 'Quicksand', sans-serif, system-ui;
     box-sizing: border-box;
     text-decoration: none;
-    transition: .3s;
+    transition: all .3s;
 }
 
 :root{
     --mainColor: #03436e;
     --footerColor: #054c7c;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 header{
@@ -38,6 +42,33 @@ header{
     border-bottom-width:2px;
     border-right-width: 2px;
     cursor: pointer;
+}
+
+.up-button{
+    background: var(--mainColor);
+    display: inline-block;
+    border-radius: 50%;
+    padding: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1;
+    border: #000 solid 0.1rem;
+    pointer-events: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.up-button.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.up-button:hover{
+    filter: brightness(1.5);
+}
+.up-button img{
+    width: 3rem;
 }
 
 #btm1{

@@ -58,38 +58,71 @@ btn4.addEventListener("click", () => {
     localStorage.setItem("theme", "yellow")
 })
 
-let slideIndex = 1;
-let slideTimer = 5000
-showSlides(slideIndex);
+let slideIndex = 0;
+let slideTimer;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+const slides = document.querySelectorAll(".mySlides");
+
+function showSlide(index) {
+
+  if (index >= slides.length) slideIndex = 0;
+  if (index < 0) slideIndex = slides.length - 1;
+
+  slides.forEach(slide => slide.style.display = "none");
+
+  slides[slideIndex].style.display = "block";
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+function nextSlide() {
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, slideTimer);
+  showSlide(slideIndex);
 }
 
+function prevSlide() {
+  slideIndex--;
+  showSlide(slideIndex);
+}
 
-window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
+function startAutoSlide() {
+  slideTimer = setInterval(() => {
+    slideIndex++;
+    showSlide(slideIndex);
+  }, 5000);
+}
 
-    if(scroll > 100)
-    console.log(scroll)
+function resetAutoSlide() {
+  clearInterval(slideTimer);
+  startAutoSlide();
+}
+
+// Buttons
+document.querySelector(".next").addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
+});
+
+// Start slideshow
+showSlide(slideIndex);
+startAutoSlide();
+
+const upButton = document.querySelector("#up-button");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        upButton.classList.add("show")
+    } else {
+        upButton.classList.remove("show")
+    }
+});
+
+upButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
